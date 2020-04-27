@@ -10,7 +10,7 @@ function App() {
             Blue Button
         </button>
         <button class="btn btn-blue">Find Groups</button>
-        <div class="bg-red-100 border bordder-red-400 text-red-700 px-4 py-3 rounded relative my-5"role="alert">
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative my-5"role="alert">
             <strong class="font-bold">Alert!</strong>
             <span class="block sm:inline">Please update your password</span>
         </div>
