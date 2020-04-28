@@ -1,58 +1,23 @@
 import React from 'react';
-import SettingsIcon from '@material-ui/icons/Settings';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import BackupIcon from '@material-ui/icons/Backup';
-import GetAppIcon from '@material-ui/icons/GetApp';
-import VpnKeyIcon from '@material-ui/icons/VpnKey';
-import TwitterIcon from '@material-ui/icons/Twitter';
+import {Link} from "react-router-dom";
 import './App.css';
 
 export default function App() {
 	return (
-		<div className="App">
-			<div className="container">
-				<div className="bg-white max-w-xl mx-auto rounded-lg mt-4 mb-4 h-15">
-					<button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded m-5">
-						My Account
-					</button>
-				</div>
-			</div>
-			<div className="max-w-4xl mx-auto flex flex-wrap p-6 bg-white rounded-lg shadow-xl justify-evenly content-center">
-				<div className="flex-shrink-0 bg-blue-500 p-16 border-4 rounded-lg m-4 h-48 w-48">
-					<div className="bg-white rounded-lg border-2 p-auto m-auto flex-col">
-						<SettingsIcon />
-						<h6 className="text-center font-serif text-xs tracking-wider antialiased">Settings</h6>
-					</div>
-				</div>
-				<div className="flex-shrink-0 bg-blue-500 py-16 px-16 border-4 rounded-lg m-4 h-48 w-48">
-					<div className="bg-white rounded-lg border-2 p-auto m-auto flex-col">
-						<ArrowForwardIosIcon />
-						<h6 className="text-center font-serif text-xs tracking-wide antialiased">Terminal</h6>
-					</div>
-				</div>
-				<div className="flex-shrink-0 bg-blue-500 py-16 px-16 border-4 rounded-lg m-4 h-48 w-48">
-					<div className="bg-white rounded-lg border-2 p-auto m-auto flex-col">
-						<BackupIcon />
-						<h6 className="text-center font-serif text-xs tracking-wider antialiased">Upload</h6>
-					</div>
-				</div>
-				<div className="flex-shrink-0 bg-blue-500 py-16 px-16 border-4 rounded-lg m-4 h-48 w-48">
-					<div className="bg-white rounded-lg border-2 p-auto m-auto flex-col">
-						<GetAppIcon />
-						<h6 className="text-center font-serif text-xs antialiased">Download</h6>
-					</div>
-				</div>
-				<div className="flex-shrink-0 bg-blue-500 py-16 px-16 border-4 rounded-lg m-4 h-48 w-48">
-					<div className="bg-white rounded-lg border-2 p-auto m-auto flex-col">
-						<VpnKeyIcon />
-						<h6 className="text-center font-serif text-xs tracking-wider antialiased">Encrypt</h6>
-					</div>
-				</div>
-				<div className="flex-shrink-0 bg-blue-500 py-16 px-16 border-4 rounded-lg m-4 h-48 w-48">
-					<div className="bg-white rounded-lg border-2 p-auto m-auto flex-col">
-						<TwitterIcon />
-						<h6 className="text-center font-serif text-xs tracking-wider antialiased">Social Media</h6>
-					</div>
+		<div className="container flex h-screen w-screen justify-center">
+			<div className="h-64 w-64 p-64 bg-gray-200 border-2 border-gray-400 rounded-lg self-center text-center relative">
+				<div style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} className="h-64 w-64 inline-block m-auto p-4 absolute flex-col items-center justify-center leading-8 border-2 rounded-lg">
+					<label for="uname"><b>Username</b></label>
+					<input className="p-1" type="text" placeholder="Enter Username" name="uname" required />
+					<label for="psw"><b>Password</b></label>
+					<input className="p-1" type="password" placeholder="Enter Password" name="psw" required />
+					<Link to="/Authenticated">
+						<button className="border-2 rounded-lg px-4 mt-2" type="submit">Login</button>
+					</Link>
+					<label className="block">
+						<input type="checkbox" checked="checked" name="remember" />
+						<label> Remember Me</label>
+					</label>
 				</div>
 			</div>
 		</div>
