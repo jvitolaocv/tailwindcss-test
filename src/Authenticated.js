@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import BackupIcon from '@material-ui/icons/Backup';
@@ -6,19 +6,30 @@ import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import {Link} from "react-router-dom";
 import IconDiv from './Components/IconDiv';
 import Button from './Components/Button';
+import SelectedOption from './Components/SelectedOption';
 
 export default function Authenticated() {
+    const [selectedItem, setSelectedItem] = useState("None");
+    
     return (
         <div className="container text-center">
-            <div className="bg-white max-w-xs mx-auto rounded-lg my-6 h-15 justify-evenly">
-                <Button buttonText="Account" />
-                <Link to="/"><Button buttonText="Logout" /></Link>
-            </div>
-            <div className="max-w-screen mx-auto flex flex-wrap p-8 bg-white rounded-lg shadow-xl justify-evenly content-center my-6">
-                <IconDiv icon={<SettingsIcon />} iconName="Settings" />
-                <IconDiv icon={<ArrowForwardIosIcon />} iconName="Terminal" />
-                <IconDiv icon={<BackupIcon />} iconName="Upload" />
-                <IconDiv icon={<VpnKeyIcon />} iconName="Encrypt" />
+            <div className="bg-blue-600 rounded-lg p-8 m-8">
+                <div className="bg-blue-500 max-w-xs mx-auto rounded-lg justify-evenly">
+                    <Button buttonText="Account" />
+                    <Link to="/"><Button buttonText="Logout" /></Link>
+                </div>
+                <div className="max-w-screen mx-auto flex flex-wrap p-8 bg-blue-500 rounded-lg shadow-xl justify-evenly content-center my-6">
+                    <button style={{outline: 0}} className="flex-shrink-0 m-4" onClick={() => (selectedItem !== "Settings" ? setSelectedItem("Settings") : setSelectedItem("None"))}><IconDiv icon={<SettingsIcon />} iconName="Settings" /></button>
+                    <button style={{outline: 0}} className="flex-shrink-0 m-4" onClick={() => (selectedItem !== "Terminal" ? setSelectedItem("Terminal") : setSelectedItem("None"))}><IconDiv icon={<ArrowForwardIosIcon />} iconName="Terminal" /></button>
+                    <button style={{outline: 0}} className="flex-shrink-0 m-4" onClick={() => (selectedItem !== "Upload" ? setSelectedItem("Upload") : setSelectedItem("None"))}><IconDiv icon={<BackupIcon />} iconName="Upload" /></button>
+                    <button style={{outline: 0}} className="flex-shrink-0 m-4" onClick={() => (selectedItem !== "Encrypt" ? setSelectedItem("Encrypt") : setSelectedItem("None"))}><IconDiv icon={<VpnKeyIcon />} iconName="Encrypt" /></button>
+                </div>
+                <div>
+                    {selectedItem === "Settings" ? <SelectedOption text="Settings!" /> : <div></div>}
+                    {selectedItem === "Terminal" ? <SelectedOption terminal={true} /> : <div></div>}
+                    {selectedItem === "Upload" ? <SelectedOption text="Upload!" /> : <div></div>}
+                    {selectedItem === "Encrypt" ? <SelectedOption text="Encrypt!" /> : <div></div>}
+                </div>
             </div>
         </div>
     );
