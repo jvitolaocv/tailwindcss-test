@@ -12,8 +12,8 @@ export default function Authenticated() {
     const [selectedItem, setSelectedItem] = useState("None");
     
     return (
-        <div className="container text-center">
-            <div className="bg-blue-600 rounded-lg p-8 m-8">
+        <div className="container flex h-screen w-screen justify-center">
+            <div className="h-auto w-auto p-8 bg-blue-600 rounded-lg self-center text-center relative">
                 <div className="bg-blue-500 max-w-xs mx-auto rounded-lg justify-evenly">
                     <Button buttonText="Account" />
                     <Link to="/"><Button buttonText="Logout" /></Link>
