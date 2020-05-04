@@ -26,7 +26,7 @@ export default function Page(props) {
         </button>
 			</div>
             <div className="flex justify-end">
-                <Link to="/"><div><button className="bg-red-700 rounded-full px-2 py-2 shadow-lg text-white hover:bg-red-600">Log out</button></div>
+                <Link to="/"><div><button className="absolute top-0 right-0 my-2 mx-8 bg-red-700 rounded-full px-2 py-2 shadow-lg text-white hover:bg-red-600">Log out</button></div>
 				</Link>
             </div>
         <div className="flex justify-around absolute inset-x-0 bottom-0 h-7 bg-black text-white w-screen">
