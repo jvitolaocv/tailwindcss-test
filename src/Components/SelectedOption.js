@@ -4,7 +4,7 @@ import './SelectedOption.css';
 
 export default function SelectedOption(props) {
     return (
-        props.terminal ?  
+        props.terminal ?
             <div className="bg-black w-full h-32 rounded-lg"> 
                 <p className="blinking text-green-400 pt-6 pl-6 text-left">> Terminal!</p>
             </div>
