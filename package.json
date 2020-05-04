@@ -38,5 +38,8 @@
     ]
   },
   "author": "jvitolaocv & zbedsoleocv",
-  "license": "ISC"
+  "license": "ISC",
+  "resolutions": {
+    "yargs-parser": "^13.1.2"
+  }
 }
