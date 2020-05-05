@@ -19,7 +19,7 @@ export default function Authenticated() {
                     <Button buttonText="Account" />
                     <Link to="/"><Button buttonText="Logout" /></Link>
                 </div>
-                <div className="max-w-screen mx-auto flex flex-wrap p-8 bg-blue-500 rounded-lg shadow-xl justify-evenly content-center my-6">
+                <div className="max-w-screen mx-auto flex flex-wrap p-2 bg-blue-500 rounded-lg shadow-xl justify-evenly content-center my-6">
                     <button style={{outline: 0}} className="flex-shrink-0 m-4" onClick={() => (selectedItem !== "Settings" ? setSelectedItem("Settings") : setSelectedItem("None"))}><IconDiv icon={<SettingsIcon />} iconName="Settings" /></button>
                     <button style={{outline: 0}} className="flex-shrink-0 m-4" onClick={() => (selectedItem !== "Terminal" ? setSelectedItem("Terminal") : setSelectedItem("None"))}><IconDiv icon={<ArrowForwardIosIcon />} iconName="Terminal" /></button>
                     <button style={{outline: 0}} className="flex-shrink-0 m-4" onClick={() => (selectedItem !== "Upload" ? setSelectedItem("Upload") : setSelectedItem("None"))}><IconDiv icon={<BackupIcon />} iconName="Upload" /></button>
