@@ -7,9 +7,9 @@ export default function App() {
 	const [checked, setChecked] = useState(true);
 	
 	return (
-		<div className="container flex h-screen w-screen justify-center text-center">
-			<div className="w-screen h-screen mx-auto p-40 bg-blue-600 rounded-lg self-center text-center relative">
-				<div style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} className="h-full w-full bg-blue-500 inline-block mx-8 my-8 p-4 absolute flex-col items-center justify-center leading-8 border-2 border-blue-500 rounded-lg">
+		<div className="container flex h-screen w-screen justify-center text-align-center">
+			<div className="sm:h-10/12 sm:w-screen sm:mx-8 p-10 bg-blue-600 rounded-lg self-center text-center relative">
+				<div style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} className="sm:h-6/12 sm:w-auto bg-blue-500 flex justify-center inline-block mx-10 my-8 p-4 flex-col leading-8 border-2 border-blue-900 rounded-lg shadow-md">
 					<label className="w-screen clearfix" for="uname"><b>Username</b></label>
 					<input className="w-full px-4 rounded-full clearfix" type="text" placeholder="Enter Username" name="uname" required />
 					<label className="w-screen clearfix" for="psw"><b>Password</b></label>

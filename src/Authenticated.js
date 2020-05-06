@@ -32,8 +32,8 @@ export default function Authenticated() {
                     {selectedItem === "Encrypt" ? <SelectedOption text="Encrypt!" /> : <div></div>}
                 </div>
             </div>       
-            <div className="flex justify-around absolute inset-x-0 bottom-0 bg-black text-white w-screen">
-                <strong className="font-bold self-center">This website is powered by OCVapps!</strong>
+            <div className="flex justify-around absolute inset-x-0 bottom-0 bg-black sm:text-sm text-white w-screen">
+                <strong className="font-bold sm:text-xs self-center">This website is powered by OCVapps!</strong>
                 <img className="w-24 h-12 m-4" src = {OCVLogo} alt="OCV Logo"/>
             </div>
         </div>
