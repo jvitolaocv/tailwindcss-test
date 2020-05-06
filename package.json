@@ -2,6 +2,8 @@
   "name": "tailwindcss-test",
   "version": "0.1.0",
   "private": true,
+  "author": "jvitolaocv & zbedsoleocv",
+  "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.9.12",
     "@material-ui/icons": "^4.9.1",
@@ -36,10 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "author": "jvitolaocv & zbedsoleocv",
-  "license": "ISC",
-  "resolutions": {
-    "yargs-parser": "^13.1.2"
   }
 }
