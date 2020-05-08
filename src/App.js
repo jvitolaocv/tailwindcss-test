@@ -5,17 +5,15 @@ import './App.css';
 
 export default function App() {
 	const [checked, setChecked] = useState(true);
-			
-			return (
-		<div className="container flex h-screen w-screen justify-center text-align-center">
-			<div className="sm:h-10/12 sm:w-screen sm:mx-8 p-10 bg-blue-600 rounded-lg self-center text-center relative">
-				<div style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} className="sm:h-6/12 sm:w-auto bg-blue-500 flex justify-center inline-block mx-10 my-8 p-4 flex-col leading-8 border-2 border-blue-900 rounded-lg shadow-md">
-					<form method="post" action="login.php" onsubmit="return validate(this)">
-					<label className="w-screen clearfix" for="uname"><b>Username</b></label>
-					<input className="w-full px-4 rounded-full clearfix" type="text" placeholder="Enter Username" name="uname" required />
-					<label className="w-screen clearfix" for="psw"><b>Password</b></label>
-					<input className="w-full px-4 rounded-full clearfix" type="password" placeholder="Enter Password" name="psw" required />
-					</form>
+	
+	return (
+		<div className="container flex h-screen w-screen justify-center text-center">
+			<div style={{height: '50vh', width: '50vw'}} className="mx-4 p-40 bg-blue-600 rounded-lg self-center text-center relative">
+				<div style={{height: '85%', width: '85%', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} className="bg-blue-500 inline-block p-8 absolute flex flex-col items-center justify-center leading-8 border-2 border-blue-500 rounded-lg">
+					<label className="w-screen clearfix sm:text-md md:text-lg lg:text-xl xl:text-2xl" for="uname"><b>Username</b></label>
+					<input className="w-9/12 px-2 py-1 m-2 rounded-full clearfix sm:text-md md:text-lg lg:text-xl xl:text-2xl" type="text" placeholder="Enter Username" name="uname" required />
+					<label className="w-screen clearfix sm:text-md md:text-lg lg:text-xl xl:text-2xl" for="psw"><b>Password</b></label>
+					<input className="w-9/12 px-2 py-1 m-2 rounded-full clearfix sm:text-md md:text-lg lg:text-xl xl:text-2xl" type="password" placeholder="Enter Password" name="psw" required />
 					<Link to="/Authenticated">
 						<Button buttonText="Login" />
 					</Link>
