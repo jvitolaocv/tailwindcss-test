@@ -14,12 +14,12 @@ export default function Authenticated() {
     
     return (
         <div className="container flex h-screen w-screen justify-center items-center"> 
-            <div className="h-auto w-auto p-8 bg-blue-600 rounded-lg self-auto text-center relative">
-                <div className="bg-blue-500 max-w-xs mx-auto rounded-lg justify-evenly">
+            <div className="h-auto w-auto p-8 bg-blue-600 rounded-lg self-auto text-center relative shadow-xl">
+                <div className="bg-blue-500 max-w-xs mx-auto rounded-lg shadow-xl">
                     <Button buttonText="Account" />
                     <Link to="/"><Button buttonText="Logout" /></Link>
                 </div>
-                <div className="max-w-screen mx-auto flex flex-wrap p-2 bg-blue-500 rounded-lg shadow-xl justify-evenly content-center my-6">
+                <div className="w-full flex flex-wrap p-2 bg-blue-500 rounded-lg shadow-xl justify-evenly content-center my-6">
                     <button style={{outline: 0}} className="flex-shrink-0 m-4" onClick={() => (selectedItem !== "Settings" ? setSelectedItem("Settings") : setSelectedItem("None"))}><IconDiv icon={<SettingsIcon />} iconName="Settings" /></button>
                     <button style={{outline: 0}} className="flex-shrink-0 m-4" onClick={() => (selectedItem !== "Terminal" ? setSelectedItem("Terminal") : setSelectedItem("None"))}><IconDiv icon={<ArrowForwardIosIcon />} iconName="Terminal" /></button>
                     <button style={{outline: 0}} className="flex-shrink-0 m-4" onClick={() => (selectedItem !== "Upload" ? setSelectedItem("Upload") : setSelectedItem("None"))}><IconDiv icon={<BackupIcon />} iconName="Upload" /></button>
@@ -31,10 +31,10 @@ export default function Authenticated() {
                     {selectedItem === "Upload" ? <SelectedOption text="Upload!" /> : <div></div>}
                     {selectedItem === "Encrypt" ? <SelectedOption text="Encrypt!" /> : <div></div>}
                 </div>
-            </div>       
-            <div className="flex justify-around absolute inset-x-0 bottom-0 bg-black sm:text-sm text-white w-screen">
-                <strong className="font-bold sm:text-xs self-center">This website is powered by OCVapps!</strong>
-                <img className="w-24 h-12 m-4" src = {OCVLogo} alt="OCV Logo"/>
+            </div>
+            <div className="flex justify-around absolute bottom-0 bg-black text-white w-screen">
+                <strong className="font-bold self-center">This website is powered by OCVapps!</strong>
+                <img className="w-24 h-12 m-4" src={OCVLogo} alt="OCV Logo"/>
             </div>
         </div>
     ); 
