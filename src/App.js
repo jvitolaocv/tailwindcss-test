@@ -17,6 +17,9 @@ export default function App() {
 					<Link to="/Authenticated">
 						<Button buttonText="Login" />
 					</Link>
+					<Link to="/accountRegister">
+						<Button buttonText="Create Account"/>
+					</Link>
 					<div className="block">
 						<input className="rounded-lg" type="checkbox" onChange={() => (setChecked(!checked))} checked={checked} name="remember" />
 						<label> Remember Me</label>
