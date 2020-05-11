@@ -6,6 +6,7 @@ import Authenticated from './Authenticated';
 import accountRegister from './accountRegister';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import EditBio from './EditBio';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -13,6 +14,7 @@ ReactDOM.render(
           <Route exact path="/" component={App} />
           <Route path="/Authenticated" component={Authenticated} />
           <Route path="/accountRegister" component={accountRegister} />
+          <Route path="/EditBio" component={EditBio} />
         </Switch>
       </BrowserRouter>,
   document.getElementById('root')
